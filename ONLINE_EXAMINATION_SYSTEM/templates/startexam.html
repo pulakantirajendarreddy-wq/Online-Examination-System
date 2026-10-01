@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Start Exam</title>
+</head>
+
+<body>
+
+    <h1>Online Exam</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        {% for q in questions %}
+        <h3>{{ forloop.counter }}. {{ q.question }}</h3>
+
+        <input type="radio" name="q{{ q.id }}" value="{{ q.option1 }}"> {{ q.option1 }}<br>
+        <input type="radio" name="q{{ q.id }}" value="{{ q.option2 }}"> {{ q.option2 }}<br>
+        <input type="radio" name="q{{ q.id }}" value="{{ q.option3 }}"> {{ q.option3 }}<br>
+        <input type="radio" name="q{{ q.id }}" value="{{ q.option4 }}"> {{ q.option4 }}<br><br>
+
+        {% endfor %}
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</body>
+
+</html>

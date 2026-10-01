@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            text-align: center;
+        }
+
+        h2 {
+            color: #0d6efd;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .exam {
+            background: #28a745;
+        }
+
+        .profile {
+            background: #17a2b8;
+        }
+
+        .result {
+            background: #ffc107;
+            color: black;
+        }
+
+        .logout {
+            background: #dc3545;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Student Dashboard</h2>
+
+        <a href="{% url 'subject_list' %}" class="btn exam">
+            Start Exam
+        </a>
+
+        <a href="{% url 'profile' %}" class="btn profile">
+            My Profile
+        </a>
+
+        <a href="{% url 'my_results' %}" class="btn result">
+            My Results
+        </a>
+
+        <a href="{% url 'logout' %}" class="btn logout">
+            Logout
+        </a>
+
+    </div>
+
+
+</body>
+
+</html>

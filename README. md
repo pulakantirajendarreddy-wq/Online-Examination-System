@@ -1,1 +1,251 @@
+# Online Examination System
+
+## 📌 Project Overview
+
+The **Online Examination System** is a web-based application developed using **Python, Django, and MySQL**. It allows students to register, log in, attend online examinations, submit answers, and view their results.
+
+The system also provides an administrator dashboard to manage students, subjects, questions, and examination results.
+
+## 🛠️ Technologies Used
+
+* **Frontend:** HTML, CSS, Bootstrap
+* **Backend:** Python, Django
+* **Database:** MySQL
+* **IDE:** Visual Studio Code
+* **Version Control:** Git & GitHub
+
+## ✨ Features
+
+### 👨‍🎓 Student
+
+* Student registration
+* Student login
+* View available subjects
+* Start online examination
+* Answer multiple-choice questions
+* Submit examination
+* Automatically calculate marks
+* View examination results
+* View previous results
+* Manage profile
+* Logout
+
+### 👨‍💼 Admin
+
+* Admin login
+* Admin dashboard
+* Manage students
+* Manage subjects
+* Add and manage questions
+* View examination results
+* Manage examination data
+
+## 🔄 System Workflow
+
+```text
+Student Registration
+        ↓
+Student Login
+        ↓
+Student Dashboard
+        ↓
+Select Subject
+        ↓
+Start Examination
+        ↓
+Answer Questions
+        ↓
+Submit Examination
+        ↓
+Result Calculation
+        ↓
+View Result
+```
+
+## 📂 Project Structure
+
+```text
+online_exam/
+│
+├── online_exam/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
+├── exam/
+│   ├── migrations/
+│   ├── templates/
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   └── tests.py
+│
+├── manage.py
+├── requirements.txt
+└── README.md
+```
+
+## 💻 Installation and Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+```
+
+### 2. Open the Project
+
+```bash
+cd online_exam
+```
+
+### 3. Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### 4. Activate Virtual Environment
+
+For Windows:
+
+```bash
+venv\Scripts\activate/
+```
+
+### 5. Install Required Packages
+
+```bash
+pip install -r requirements.txt
+```
+
+If you don't have a `requirements.txt` file yet, you can install Django using:
+
+```bash
+pip install django
+```
+
+For MySQL:
+
+```bash
+pip install mysqlclient
+```
+
+## 🗄️ Database Configuration
+
+Create a MySQL database, for example:
+
+```sql
+CREATE DATABASE online_exam;
+```
+
+Then configure the database in:
+
+```text
+online_exam/settings.py
+```
+
+Example:
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'online_exam',
+        'USER': 'root',
+        'PASSWORD': 'your_password',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+```
+
+Replace `your_password` with your MySQL password.
+
+## 🔧 Apply Migrations
+
+Run:
+
+```bash
+python manage.py makemigrations
+```
+
+Then:
+
+```bash
+python manage.py migrate
+```
+
+## 👤 Create Admin Account
+
+Run:
+
+```bash
+python manage.py createsuperuser
+```
+
+Enter your username, email, and password when prompted.
+
+## ▶️ Run the Project
+
+Start the Django development server:
+
+```bash
+python manage.py runserver
+```
+
+Open the application in your browser:
+
+```text
+http://127.0.0.1:8000/
+```
+
+## 🌐 Main URLs
+
+```text
+/                  → Home Page
+/register/         → Student Registration
+/studentlogin/     → Student Login
+/adminlogin/       → Admin Login
+/admindashboard/   → Admin Dashboard
+/studentdashboard/ → Student Dashboard
+/startexam/        → Start Examination
+/subjects/         → Subjects
+/exam/<id>/        → Examination
+/result/           → Result
+/my-results/       → Previous Results
+/profile/          → Student Profile
+/logout/           → Logout
+```
+
+## 🎯 Objective
+
+The main objective of this project is to provide a simple, secure, and efficient platform for conducting examinations online. It reduces manual examination work and provides quick result generation.
+
+## 🚀 Future Enhancements
+
+* Online exam timer
+* Random question generation
+* Email notifications
+* Question difficulty levels
+* Performance analytics
+* PDF result generation
+* Password reset functionality
+* Responsive mobile interface
+* AI-based question generation
+* Online proctoring
+
+## 👨‍💻 Developer
+
+**P Rajendar Reddy**
+
+B.Tech – Artificial Intelligence and Machine Learning
+
+## 📄 License
+
+This project is developed for educational and academic purposes.
 
